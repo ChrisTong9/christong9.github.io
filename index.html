@@ -246,6 +246,7 @@ h2{font-family:var(--sans);font-size:27px;letter-spacing:-.035em;font-weight:500
     <li><a href="https://www.linkedin.com/in/zhongyi-tong-48559a323" target="_blank" rel="noopener noreferrer">LinkedIn<span class="arrow" aria-hidden="true">↗</span></a></li>
     <li><a href="mailto:ztong@wpi.edu">Email<span class="arrow" aria-hidden="true">↗</span></a></li>
     <li><a href="mailto:zhongyitong614@gmail.com">Personal email<span class="arrow" aria-hidden="true">↗</span></a></li>
+    <li><a href="assets/Zhongyi_Tong_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)<span class="arrow" aria-hidden="true">↗</span></a></li>
   </ul>
   <p class="links-note" id="links-note" hidden>Dotted links will be added.</p>
 </aside>
@@ -346,7 +347,7 @@ Do not add literal </script sequences to JSON strings; encode < as \u003c.
     "linkedin": "https://www.linkedin.com/in/zhongyi-tong-48559a323",
     "email": "ztong@wpi.edu",
     "emailSecondary": "zhongyitong614@gmail.com",
-    "cv": ""
+    "cv": "assets/Zhongyi_Tong_Resume.pdf"
   },
   "publications": [
     {
@@ -450,12 +451,19 @@ const email = textValue(profile.email);
 if (/^[^\s@?&#]+@[^\s@?&#]+\.[^\s@?&#]+$/.test(email)) social.push(["Email", "mailto:" + email, false]);
 const emailSecondary = textValue(profile.emailSecondary);
 if (/^[^\s@?&#]+@[^\s@?&#]+\.[^\s@?&#]+$/.test(emailSecondary)) social.push(["Personal email", "mailto:" + emailSecondary, false]);
-if (safeURL(profile.cv)) social.push(["CV", safeURL(profile.cv), false]);
+if (safeURL(profile.cv)) social.push(["Resume (PDF)", safeURL(profile.cv), true]);
 const socialList = byId("profile-links");
 socialList.replaceChildren();
-for (const [label, url] of social) {
+for (const [label, url, newTab] of social) {
   const item = make("li");
-  if (url) item.append(externalLink(label, url));
+  if (url) {
+    const link = externalLink(label, url);
+    if (newTab) {
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    }
+    item.append(link);
+  }
   else {
     const pending = make("span", "pending", label);
     pending.setAttribute("aria-label", label + " — link to be added");
@@ -607,3 +615,4 @@ if ("IntersectionObserver" in window) {
 </script>
 </body>
 </html>
+
