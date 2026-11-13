@@ -264,7 +264,7 @@ h2{font-family:var(--sans);font-size:27px;letter-spacing:-.035em;font-weight:500
 <section class="section publications" id="publications" aria-labelledby="publications-heading">
   <div class="section-heading"><h2 id="publications-heading">Publications</h2><p class="section-index" aria-hidden="true">02</p></div>
   <div id="publications-content"><ol class="paper-list">
-<li class="paper"><div class="paper-year"></div><div><h3>Harmony: Bridging Audio Understanding and Editing through Agentic Collaboration</h3><p class="venue">Under review at TMLR</p><p class="paper-summary">An agentic framework integrating LLM planning, audio understanding, and specialized tools for sound addition, removal, replacement, and volume adjustment.</p><p class="paper-result">22.62% exact match on 420 MMAE examples, compared with 13.57% for the strongest baseline.</p><ul class="links"><li><a href="https://christong9.github.io/harmony/" target="_blank" rel="noopener noreferrer">Project<span class="arrow" aria-hidden="true">↗</span></a></li><li><a href="https://github.com/ChrisTong9/harmony" target="_blank" rel="noopener noreferrer">Code<span class="arrow" aria-hidden="true">↗</span></a></li></ul></div></li>
+<li class="paper"><div class="paper-year">2026</div><div><h3>Harmony: Bridging Audio Understanding and Editing through Agentic Collaboration</h3><p class="authors"><strong>Zhongyi Tong</strong> and Yapeng Tian</p><p class="venue">arXiv preprint · Under review at TMLR</p><p class="paper-summary">An agentic framework integrating LLM planning, audio understanding, and specialized tools for sound addition, removal, replacement, and volume adjustment.</p><p class="paper-result">22.62% exact match on 420 MMAE examples, compared with 13.57% for the strongest baseline.</p><ul class="links"><li><a href="https://arxiv.org/abs/2611.14724" target="_blank" rel="noopener noreferrer">arXiv<span class="arrow" aria-hidden="true">↗</span></a></li><li><a href="https://christong9.github.io/harmony/" target="_blank" rel="noopener noreferrer">Project<span class="arrow" aria-hidden="true">↗</span></a></li><li><a href="https://github.com/ChrisTong9/harmony" target="_blank" rel="noopener noreferrer">Code<span class="arrow" aria-hidden="true">↗</span></a></li></ul></div></li>
 <li class="paper"><div class="paper-year">2026</div><div><h3>A Two-Stage Fusion Framework for Few-Shot Species Identification from Melting Curve Data</h3><p class="authors">Chengqian Zhang, Kyumin Lee, and <strong>Zhongyi Tong</strong></p><p class="venue">ACM BCB 2026</p><p class="paper-summary">A two-stage framework fusing BERT-encoded statistical prompts with time-series patch embeddings to identify species from DNA melting curves.</p><p class="paper-result">93.08% mean accuracy across 65 shark and ray species, with only three training samples per species.</p><ul class="links"><li><a href="https://web.cs.wpi.edu/~kmlee/pubs/zhang26bcb.pdf" target="_blank" rel="noopener noreferrer">Paper PDF<span class="arrow" aria-hidden="true">↗</span></a></li></ul></div></li>
 </ol></div>
 </section>
@@ -305,7 +305,7 @@ links.linkedin: your actual profile URL, not the LinkedIn homepage.
 links.scholar: your actual Google Scholar profile URL.
 links.email: your primary email address (without "mailto:").
 links.emailSecondary: optional second email address.
-Harmony authors are not provided yet; fill the authors field in order when available.
+Harmony author order follows arXiv:2611.14724: Zhongyi Tong, Yapeng Tian.
 links.cv: "assets/cv.pdf" (hidden until filled).
 
 A publication object:
@@ -352,12 +352,16 @@ Do not add literal </script sequences to JSON strings; encode < as \u003c.
   "publications": [
     {
       "title": "Harmony: Bridging Audio Understanding and Editing through Agentic Collaboration",
-      "authors": "",
-      "venue": "Under review at TMLR",
-      "year": "",
+      "authors": "Zhongyi Tong and Yapeng Tian",
+      "venue": "arXiv preprint · Under review at TMLR",
+      "year": "2026",
       "summary": "An agentic framework integrating LLM planning, audio understanding, and specialized tools for sound addition, removal, replacement, and volume adjustment.",
       "result": "22.62% exact match on 420 MMAE examples, compared with 13.57% for the strongest baseline.",
       "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.14724"
+        },
         {
           "label": "Project",
           "url": "https://christong9.github.io/harmony/"

@@ -28,7 +28,7 @@
 
 JSON 的引号、逗号和括号需要保持有效。论文等内容由此配置生成。文件里的 CONTENT GUIDE 提供了填写示例。
 
-Harmony 目前标注为 Under review at TMLR。完整作者顺序尚待补充；拿到真实顺序后填写其 authors 字段。
+Harmony 已发布为 arXiv:2611.14724，同时保留 Under review at TMLR 状态。作者顺序为 Zhongyi Tong、Yapeng Tian。
 
 ## 添加艺术作品
 
