@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" role="img" aria-labelledby="title description">
+  <title id="title">Ultrasound across users — conceptual illustration</title>
+  <desc id="description">A conceptual forearm and ultrasound probe with three possible sensor positions, connected to an abstract echo diagram. This illustration is not an experimental ultrasound image or a representation of measured results.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f0f4fa"/>
+      <stop offset="1" stop-color="#e7edf6"/>
+    </linearGradient>
+    <linearGradient id="arm" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#e4eaf3"/>
+      <stop offset="1" stop-color="#cbd7e9"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#1644bb" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#1644bb" stop-opacity=".02"/>
+    </linearGradient>
+    <clipPath id="echo-window"><rect x="422" y="66" width="154" height="101" rx="4"/></clipPath>
+  </defs>
+  <rect width="640" height="440" fill="url(#background)"/>
+  <g fill="#1644bb" opacity=".12">
+    <circle cx="52" cy="52" r="2"/><circle cx="68" cy="52" r="2"/><circle cx="84" cy="52" r="2"/>
+    <circle cx="52" cy="68" r="2"/><circle cx="68" cy="68" r="2"/><circle cx="84" cy="68" r="2"/>
+    <circle cx="52" cy="84" r="2"/><circle cx="68" cy="84" r="2"/><circle cx="84" cy="84" r="2"/>
+  </g>
+  <g stroke="#9dacc4" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M55 255C139 228 224 228 316 243L375 251" stroke-dasharray="5 8" opacity=".7"/>
+    <path d="M72 361C168 369 263 359 369 346" stroke-dasharray="5 8" opacity=".7"/>
+  </g>
+  <path d="M48 284C125 251 209 248 310 263L374 272C399 276 416 267 429 254L451 231Q458 223 465 229Q472 234 467 243L455 264L491 258L534 246Q545 244 547 252Q549 260 539 264L503 277L553 267Q564 266 566 274Q568 283 556 286L509 297L558 292Q569 292 570 301Q570 309 559 311L509 320L542 320Q553 321 553 329Q553 337 542 339L490 344C460 346 433 335 412 329L370 327C249 341 157 350 68 341" fill="url(#arm)" stroke="#7f94b4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M278 263L226 328Q279 337 338 324L294 264Z" fill="url(#beam)"/>
+  <g fill="none" stroke="#1644bb" stroke-width="1.4" opacity=".34">
+    <path d="M260 286Q285 293 311 285"/>
+    <path d="M250 302Q283 313 323 301"/>
+    <path d="M240 317Q283 330 332 316"/>
+  </g>
+  <g fill="none" stroke="#7991b7" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 5">
+    <path d="M177 225L174 252Q194 250 214 251L217 226"/>
+    <path d="M339 240L334 267L374 273L379 246"/>
+  </g>
+  <g fill="#fafbfc" stroke="#7d93b6" stroke-width="1.5">
+    <circle cx="197" cy="209" r="5"/>
+    <circle cx="360" cy="224" r="5"/>
+  </g>
+  <path d="M280 166V139C280 101 348 121 348 73V54" fill="none" stroke="#4b638b" stroke-width="5" stroke-linecap="round"/>
+  <path d="M261 163H299L307 225L301 251Q284 256 267 251L252 225Z" fill="#fafbfc" stroke="#415c8b" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M261 163H299L302 186H258Z" fill="#1644bb"/>
+  <path d="M260 232L304 232L301 251Q284 256 267 251Z" fill="#1644bb"/>
+  <path d="M265 202H296M266 209H297M267 216H298" stroke="#c1cee2" stroke-width="2" stroke-linecap="round"/>
+  <path d="M269 259Q283 263 298 259" fill="none" stroke="#1644bb" stroke-width="3" stroke-linecap="round"/>
+  <g fill="none" stroke="#1644bb" stroke-width="1.5">
+    <path d="M311 203H377Q390 203 390 190V135H411"/>
+    <circle cx="311" cy="203" r="3.5" fill="#1644bb" stroke="none"/>
+  </g>
+  <rect x="410" y="54" width="178" height="142" rx="9" fill="#fafbfc" stroke="#afbed4" stroke-width="1.5"/>
+  <rect x="422" y="66" width="154" height="101" rx="4" fill="#182637"/>
+  <g clip-path="url(#echo-window)" fill="none" stroke-linecap="round">
+    <path d="M435 86C458 77 470 94 493 86S534 78 563 86" stroke="#dce6f5" stroke-width="2.5"/>
+    <path d="M435 103C453 95 473 109 492 100S535 96 563 105" stroke="#8ca5c7" stroke-width="1.8"/>
+    <path d="M435 119C463 106 474 128 498 117S541 120 563 113" stroke="#b9cbe3" stroke-width="3"/>
+    <path d="M435 139C457 128 478 145 501 134S544 135 563 142" stroke="#738bad" stroke-width="2.2"/>
+    <path d="M440 151C467 145 489 157 511 149S543 147 559 153" stroke="#59718f" stroke-width="1.5"/>
+    <path d="M447 74V159M552 74V159" stroke="#6a89b0" stroke-width="1" stroke-dasharray="2 6" opacity=".35"/>
+  </g>
+  <circle cx="427" cy="181" r="3" fill="#1644bb"/>
+  <text x="439" y="184" fill="#5c6870" font-family="Arial, Helvetica, sans-serif" font-size="9" letter-spacing="1.25">ECHO SCHEMATIC</text>
+  <path d="M165 385H375" stroke="#a0b2cd" stroke-width="1"/>
+  <circle cx="197" cy="385" r="3" fill="#8ba1c3"/>
+  <circle cx="282" cy="385" r="4" fill="#1644bb"/>
+  <circle cx="360" cy="385" r="3" fill="#8ba1c3"/>
+  <text x="270" y="412" text-anchor="middle" fill="#5c6870" font-family="Arial, Helvetica, sans-serif" font-size="10" letter-spacing="2">SENSOR POSITION</text>
+</svg>

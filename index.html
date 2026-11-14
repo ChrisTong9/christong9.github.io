@@ -162,7 +162,7 @@ h2{font-family:var(--sans);font-size:27px;letter-spacing:-.035em;font-weight:500
 
 /* INDEX — profile on the left; introduction and work on the right */
 .index-layout{row-gap:39px}
-.index-layout .profile-sidebar{grid-column:1;grid-row:1/span 3;align-self:stretch;border-right:1px solid var(--line);padding:0 34px 20px 0}
+.index-layout .profile-sidebar{grid-column:1;grid-row:1/span 4;align-self:stretch;border-right:1px solid var(--line);padding:0 34px 20px 0}
 .profile-sidebar h1{margin-bottom:26px}
 .profile-sidebar .portrait{width:100%;float:none;margin:0 0 23px}
 .profile-sidebar .links{display:flex;flex-direction:column;align-items:flex-start;gap:2px;margin:0}
@@ -174,7 +174,7 @@ h2{font-family:var(--sans);font-size:27px;letter-spacing:-.035em;font-weight:500
 .index-layout .about .bio p{margin:0 0 15px}
 .index-layout .about .bio p:last-child{margin-bottom:0}
 .index-layout .publications{grid-column:2;grid-row:2}
-.index-layout .art{grid-column:2;grid-row:3}
+.index-layout .art{grid-column:2;grid-row:4}
 @media(max-width:1040px){.index-layout .profile-sidebar{padding-right:25px}.index-layout .about .bio{font-size:14px}}
 @media(max-width:780px){
   .index-layout .profile-sidebar{border-right:0;padding:0;margin:0 0 39px}
@@ -220,6 +220,25 @@ h2{font-family:var(--sans);font-size:27px;letter-spacing:-.035em;font-weight:500
  .paper .paper-summary,.paper .paper-result{font-size:12px}
 }
 @media print{.index-layout .about .bio{font-size:11pt}.paper .paper-summary,.paper .paper-result{font-size:9pt}}
+
+/* Ongoing projects */
+.index-layout .projects{grid-column:2;grid-row:3;padding-bottom:4px}
+.projects .section-heading{margin-bottom:25px}
+.project-card{display:grid;grid-template-columns:minmax(0,210px) minmax(0,1fr);gap:25px;align-items:start}
+.project-visual{margin:0;overflow:hidden;border:1px solid #dce3eb;background:#edf2f8}
+.project-visual img{display:block;width:100%;height:auto;aspect-ratio:16/11;object-fit:contain}
+.project-copy{min-width:0}
+.project-status{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9px;line-height:1.4;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 9px}
+.project-status:before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor}
+.project-card h3{font-size:17px;line-height:1.45;letter-spacing:-.02em;font-weight:500;margin:0 0 10px}
+.project-summary{font-size:12px;line-height:1.8;color:var(--muted);margin:0 0 13px}
+.project-advisor,.project-lab{font-size:11px;line-height:1.8;margin:2px 0;color:var(--muted)}
+.project-advisor a,.project-lab a{text-decoration-color:#b3bdc9}
+.project-advisor a{color:var(--ink)}
+@media(max-width:1040px) and (min-width:781px){.project-card{grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:20px}}
+@media(max-width:560px){.project-card{grid-template-columns:1fr;gap:18px}.project-visual{max-width:100%}.project-visual img{aspect-ratio:2/1}.project-summary{font-size:13px}.project-advisor,.project-lab{font-size:12px}}
+@media(max-width:470px){.header{flex-wrap:wrap;gap:13px}.header .nav{width:100%;justify-content:space-between;gap:10px}}
+@media print{.project-card{grid-template-columns:160px minmax(0,1fr);gap:20px;break-inside:avoid}.project-visual img{aspect-ratio:16/11}}
 </style>
 <link rel="canonical" href="https://christong9.github.io/">
 </head>
@@ -231,7 +250,8 @@ h2{font-family:var(--sans);font-size:27px;letter-spacing:-.035em;font-weight:500
   <nav class="nav" aria-label="Main navigation">
     <a href="#about" aria-current="location"><span class="n" aria-hidden="true">01</span> About</a>
     <a href="#publications"><span class="n" aria-hidden="true">02</span> Publications</a>
-    <a href="#art"><span class="n" aria-hidden="true">03</span> Art</a>
+    <a href="#projects"><span class="n" aria-hidden="true">03</span> Projects</a>
+    <a href="#art"><span class="n" aria-hidden="true">04</span> Art</a>
   </nav>
 </header>
 <main id="main" class="index-layout">
@@ -268,8 +288,23 @@ h2{font-family:var(--sans);font-size:27px;letter-spacing:-.035em;font-weight:500
 <li class="paper"><div class="paper-year">2026</div><div><h3>A Two-Stage Fusion Framework for Few-Shot Species Identification from Melting Curve Data</h3><p class="authors">Chengqian Zhang, Kyumin Lee, and <strong>Zhongyi Tong</strong></p><p class="venue">ACM BCB 2026</p><p class="paper-summary">A two-stage framework fusing BERT-encoded statistical prompts with time-series patch embeddings to identify species from DNA melting curves.</p><p class="paper-result">93.08% mean accuracy across 65 shark and ray species, with only three training samples per species.</p><ul class="links"><li><a href="https://web.cs.wpi.edu/~kmlee/pubs/zhang26bcb.pdf" target="_blank" rel="noopener noreferrer">Paper PDF<span class="arrow" aria-hidden="true">↗</span></a></li></ul></div></li>
 </ol></div>
 </section>
+<section class="section projects" id="projects" aria-labelledby="projects-heading">
+  <div class="section-heading"><h2 id="projects-heading">Ongoing Projects</h2><p class="section-index" aria-hidden="true">03</p></div>
+  <article class="project-card" aria-labelledby="ultrasound-heading">
+    <figure class="project-visual">
+      <img src="assets/ultrasound-cross-user.svg" width="640" height="440" loading="lazy" decoding="async" alt="Concept illustration of an ultrasound probe and different sensor positions on a forearm.">
+    </figure>
+    <div class="project-copy">
+      <p class="project-status">Ongoing</p>
+      <h3 id="ultrasound-heading">Cross-User Generalization in Ultrasound</h3>
+      <p class="project-summary">Investigating how sensor-position information can guide vision-language model fine-tuning for cross-user generalization in ultrasound-based hand motion prediction.</p>
+      <p class="project-advisor">Advisor: <a href="https://www.wpi.edu/people/faculty/hzhang10" target="_blank" rel="noopener noreferrer">Prof. Haichong (Kai) Zhang</a></p>
+      <p class="project-lab"><a href="https://wp.wpi.edu/medicalfusionlab/" target="_blank" rel="noopener noreferrer">Medical FUSION Laboratory</a> · WPI</p>
+    </div>
+  </article>
+</section>
 <section class="section art" id="art" aria-labelledby="art-heading">
-  <div class="section-heading"><h2 id="art-heading">Art &amp; installation</h2><p class="section-index" aria-hidden="true">03</p></div>
+  <div class="section-heading"><h2 id="art-heading">Art &amp; installation</h2><p class="section-index" aria-hidden="true">04</p></div>
   <div class="art-grid">
     <div class="art-column">
       <h3 class="art-label">Selected artworks <span id="art-count"></span></h3>
