@@ -239,6 +239,22 @@ h2{font-family:var(--sans);font-size:27px;letter-spacing:-.035em;font-weight:500
 @media(max-width:560px){.project-card{grid-template-columns:1fr;gap:18px}.project-visual{max-width:100%}.project-visual img{aspect-ratio:2/1}.project-summary{font-size:13px}.project-advisor,.project-lab{font-size:12px}}
 @media(max-width:470px){.header{flex-wrap:wrap;gap:13px}.header .nav{width:100%;justify-content:space-between;gap:10px}}
 @media print{.project-card{grid-template-columns:160px minmax(0,1fr);gap:20px;break-inside:avoid}.project-visual img{aspect-ratio:16/11}}
+
+/* Compact installation feature */
+.installation-piece{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:24px;align-items:start;margin:0}
+.installation-piece .work-stage{aspect-ratio:16/9;background:#101116}
+.installation-piece .work-stage video{width:100%;height:100%;object-fit:contain}
+.installation-piece .work-caption{padding-top:0}
+.installation-piece .caption-top{align-items:baseline;gap:12px}
+.installation-piece .work-caption h4{font-size:19px;font-weight:500;line-height:1.35;letter-spacing:-.025em}
+.installation-piece .work-caption>p{font-size:10px;line-height:1.7;margin-top:7px}
+.installation-piece .work-caption .work-description{font-size:12px;line-height:1.8;margin-top:12px}
+.installation-stills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:15px}
+.installation-stills button,.installation-stills a{display:block;aspect-ratio:16/9;overflow:hidden;background:#101116}
+.installation-stills img{display:block;width:100%;height:100%;object-fit:cover}
+@media(max-width:1040px) and (min-width:781px){.installation-piece{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px}.installation-piece .work-caption h4{font-size:17px}}
+@media(max-width:600px){.installation-piece{grid-template-columns:1fr;gap:18px}.installation-piece .work-caption h4{font-size:20px}.installation-piece .work-caption .work-description{font-size:13px}.installation-stills{max-width:380px}}
+@media print{.installation-piece{break-inside:avoid}.installation-stills button{display:block}}
 </style>
 <link rel="canonical" href="https://christong9.github.io/">
 </head>
@@ -305,15 +321,20 @@ h2{font-family:var(--sans);font-size:27px;letter-spacing:-.035em;font-weight:500
 </section>
 <section class="section art" id="art" aria-labelledby="art-heading">
   <div class="section-heading"><h2 id="art-heading">Art &amp; installation</h2><p class="section-index" aria-hidden="true">04</p></div>
-  <div class="art-grid">
-    <div class="art-column">
-      <h3 class="art-label">Selected artworks <span id="art-count"></span></h3>
-      <div id="artworks"><figure class="artwork"><div class="work-stage"><div class="placeholder"><span class="cross" aria-hidden="true"></span><span class="label">Artwork</span><span class="detail">To be added</span></div></div><figcaption class="work-caption"><div class="caption-top"><h4>Selected artworks</h4></div><p>Images and details forthcoming.</p></figcaption></figure></div>
-    </div>
-    <div class="art-column installation">
-      <h3 class="art-label">Installation <span id="installation-count"></span></h3>
-      <div id="installations"><figure class="artwork"><div class="work-stage"><div class="placeholder"><span class="cross" aria-hidden="true"></span><span class="label">Installation</span><span class="detail">To be added</span></div></div><figcaption class="work-caption"><div class="caption-top"><h4>Installation</h4></div><p>Documentation forthcoming.</p></figcaption></figure></div>
-    </div>
+  <div id="artworks" hidden></div>
+  <div id="installations">
+    <figure class="artwork installation-piece">
+      <div class="work-stage"><video controls playsinline preload="none" poster="assets/light-carries-poster.jpg" src="assets/what-the-light-carries.mp4" aria-label="What the Light Carries — installation film">Your browser does not support embedded video. <a href="assets/what-the-light-carries.mp4">Watch the installation film</a>.</video></div>
+      <figcaption class="work-caption">
+        <div class="caption-top"><h4>What the Light Carries</h4><span class="year">2026</span></div>
+        <p>Interactive light & sound installation</p>
+        <p class="work-description">An interactive installation where changes in light and shadow shape melody and moving images. It explores the traces of memory and emotion through encounters with light.</p>
+        <div class="installation-stills" aria-label="Installation video stills">
+          <a href="assets/light-carries-still-01.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/light-carries-still-01.jpg" alt="A participant interacting with the light installation beside a laptop and projector." loading="lazy" width="960" height="540"></a>
+          <a href="assets/light-carries-still-02.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/light-carries-still-02.jpg" alt="A close-up of a hand changing the red and green light around the installation." loading="lazy" width="960" height="540"></a>
+        </div>
+      </figcaption>
+    </figure>
   </div>
 </section>
 </main>
@@ -423,7 +444,28 @@ Do not add literal </script sequences to JSON strings; encode < as \u003c.
     }
   ],
   "artworks": [],
-  "installations": [],
+  "installations": [
+    {
+      "title": "What the Light Carries",
+      "year": "2026",
+      "medium": "Interactive light & sound installation",
+      "image": "assets/light-carries-poster.jpg",
+      "alt": "Colored light illuminating hands and a tabletop installation in What the Light Carries.",
+      "description": "An interactive installation where changes in light and shadow shape melody and moving images. It explores the traces of memory and emotion through encounters with light.",
+      "video": "assets/what-the-light-carries.mp4",
+      "url": "",
+      "gallery": [
+        {
+          "image": "assets/light-carries-still-01.jpg",
+          "alt": "A participant interacting with the light installation beside a laptop and projector."
+        },
+        {
+          "image": "assets/light-carries-still-02.jpg",
+          "alt": "A close-up of a hand changing the red and green light around the installation."
+        }
+      ]
+    }
+  ],
   "authorName": "Zhongyi Tong"
 }
 </script>
@@ -581,17 +623,20 @@ function renderWorks(key, countID) {
     ? content[key].filter((work) => work && textValue(work.title)) : [];
   if (!works.length) return;
   const container = byId(key);
+  if (!container) return;
+  container.hidden = false;
   container.replaceChildren();
-  byId(countID).textContent = String(works.length).padStart(2, "0");
+  const count = byId(countID);
+  if (count) count.textContent = String(works.length).padStart(2, "0");
   for (const work of works) {
-    const figure = make("figure", "artwork");
+    const figure = make("figure", key === "installations" ? "artwork installation-piece" : "artwork");
     const stage = make("div", "work-stage");
     const imageURL = safeURL(work.image);
     const videoURL = safeURL(work.video);
     if (videoURL) {
       const video = make("video");
       video.controls = true;
-      video.preload = "metadata";
+      video.preload = "none";
       video.playsInline = true;
       video.setAttribute("aria-label", textValue(work.title));
       if (imageURL) video.poster = imageURL;
@@ -629,6 +674,28 @@ function renderWorks(key, countID) {
       const project = make("p");
       project.append(externalLink("View project", projectURL));
       caption.append(project);
+    }
+    if (Array.isArray(work.gallery) && work.gallery.length) {
+      const gallery = make("div", "installation-stills");
+      gallery.setAttribute("aria-label", "Installation video stills");
+      for (const still of work.gallery) {
+        const stillURL = safeURL(still.image);
+        if (!stillURL) continue;
+        const button = make("button", "image-button");
+        button.type = "button";
+        button.setAttribute("aria-label", textValue(still.alt) || "View installation still");
+        const image = make("img");
+        image.src = stillURL;
+        image.alt = textValue(still.alt) || textValue(work.title);
+        image.loading = "lazy";
+        image.decoding = "async";
+        image.width = 960;
+        image.height = 540;
+        button.append(image);
+        button.addEventListener("click", () => openWork({ ...work, alt: still.alt }, stillURL));
+        gallery.append(button);
+      }
+      caption.append(gallery);
     }
     figure.append(stage, caption);
     container.append(figure);
